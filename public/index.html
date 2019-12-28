@@ -28,11 +28,12 @@
         body, #message { margin-top: 0; background: #121212; box-shadow: none; }
         body { border-top: 16px solid #BB86FC; }
       }
+      @-ms-viewport{ width: device-width; }
     </style>
   </head>
   <body>
     <div id="message">
-      <h2>Program Notes</h2>
+      <h2>Program Notes - Zach Weiner, piano</h2>
       <div id="currentProgram">
         <div id="controlButtons">
           <button id="prevButton">Previous</button>
@@ -43,32 +44,34 @@
         <h3 id="movementNum"></h3>
         
         <div id="note0">
-          Aria
+          Please make sure that your phone is in do not disturb mode.
         </div>
 
         <div id="note1">
-          Variation 1
+          Aria
         </div>
 
         <div id="note2">
-          Var 2
+          Var 1
         </div>
 
         <div id="note3">
-          Var 3
+          Var 2
         </div>
 
         <div id="note4">
-          Var 4
+          Var 3
         </div>
 
         <div id="note5">
-          Var 5
+          Var 4
         </div>
       </div>
     </div>
 
     <script>
+      window.scroll(0,1);
+
       let startingState = 0;
       class ProgramNotes {
         constructor() {
