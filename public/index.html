@@ -10,13 +10,11 @@
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/7.6.1/firebase-auth.js"></script>
     <script defer src="/__/firebase/7.6.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.6.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
 
     <style media="screen">
-      body { background: black; color: white; font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      body { background: black; color: white; font-family: -apple-system, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
       #message { background: #121212; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
       #message h2 { color: #BB86FC; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
       #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
@@ -132,7 +130,7 @@
 
         try {
           let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          let features = ['auth', 'database'].filter(feature => typeof app[feature] === 'function');
           console.log(`Firebase SDK loaded with ${features.join(', ')}`);
         } catch (e) {
           console.error(e);
