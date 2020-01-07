@@ -22,13 +22,31 @@
       #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
       #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
       #controlButtons { display: none;}
-      #currentProgram > div {display: none;}  
+      #currentProgram > div {display: none;} 
+      h3 { font-size: 2em; }
+      label {display: block; font-size: 1.5em; padding: 8px 0;} 
       button { height: 44px; min-width: 44px; margin: 36px 8px 0; padding: 8px; background-color: #BB86FC}
       @media (max-width: 600px) {
         body, #message { margin-top: 0; background: #121212; box-shadow: none; }
         body { border-top: 16px solid #BB86FC; }
       }
       @-ms-viewport{ width: device-width; }
+
+      input[type=checkbox] {
+        width: 2em;
+        height: 2em;
+        background-color: white;
+        border-radius: 25%;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+        margin: 8px;
+      }
+      input[type=checkbox]:checked {
+        background-color: #BB86FC;
+      }
     </style>
   </head>
   <body>
@@ -48,30 +66,157 @@
         </div>
 
         <div id="note1">
-          Aria
+          <h3>Aria</h3>
+          Just take it in.
         </div>
 
         <div id="note2">
-          Var 1
+          <h3>Variation 1</h3>
+          <label><input type="checkbox" name="checkbox">Polonaise</label>
+          <label><input type="checkbox" name="checkbox">Arabesque</label>
+          <label><input type="checkbox" name="checkbox">Dance-able</label>
+          <label><input type="checkbox" name="checkbox">Light</label>
+          <label><input type="checkbox" name="checkbox">Heavy</label>
         </div>
 
         <div id="note3">
-          Var 2
+          <h3>Variation 2</h3>
+          <label><input type="checkbox" name="checkbox">Playful</label>
+          <label><input type="checkbox" name="checkbox">Argumentative</label>
+          <label><input type="checkbox" name="checkbox">Conversational</label>
+          <label><input type="checkbox" name="checkbox">Dance-like</label>
+          <label><input type="checkbox" name="checkbox">Lyrical</label>
         </div>
 
         <div id="note4">
-          Var 3
+          <h3>Variation 3 - Canon on the unison</h3>
+          <label><input type="checkbox" name="checkbox">Formal</label>
+          <label><input type="checkbox" name="checkbox">Casual</label>
+          <label><input type="checkbox" name="checkbox">River-like</label>
+          <label><input type="checkbox" name="checkbox">Pastoral</label>
+          <label><input type="checkbox" name="checkbox">Mechanical</label>
         </div>
 
         <div id="note5">
-          Var 4
+          <h3>Variation 4</h3>
+          <label><input type="checkbox" name="checkbox">Courtly</label>
+          <label><input type="checkbox" name="checkbox">Religious</label>
+          <label><input type="checkbox" name="checkbox">Light</label>
+          <label><input type="checkbox" name="checkbox">Heavy</label>
+        </div>
+
+        <div id="note6">
+          <h3>Variation 5</h3>
+          <label><input type="checkbox" name="checkbox">Toddlers</label>
+          <label><input type="checkbox" name="checkbox">Kids</label>
+          <label><input type="checkbox" name="checkbox">Teenagers</label>
+          <label><input type="checkbox" name="checkbox">Young adults</label>
+          <label><input type="checkbox" name="checkbox">Spry older adults</label>
+        </div>
+
+        <div id="note7">
+          <h3>Variation 6 - Canon on the second</h3>
+          <label><input type="checkbox" name="checkbox">Hopeful</label>
+          <label><input type="checkbox" name="checkbox">Nostalgic</label>
+          <label><input type="checkbox" name="checkbox">Regretful</label>
+          <label><input type="checkbox" name="checkbox">Pining</label>
+          <label><input type="checkbox" name="checkbox">Peaceful</label>
+        </div>
+
+        <div id="note8">
+          <h3>Variation 7 - tempo di Giga</h3>
+          <label><input type="checkbox" name="checkbox">German</label>
+          <label><input type="checkbox" name="checkbox">Irish</label>
+          <label><input type="checkbox" name="checkbox">French</label>
+          <label><input type="checkbox" name="checkbox">Italian</label>
+          <label><input type="checkbox" name="checkbox">Other</label>
+        </div>
+
+        <div id="note9">
+          <h3>Variation 8</h3>
+          <label><input type="checkbox" name="checkbox">Dark</label>
+          <label><input type="checkbox" name="checkbox">Light</label>
+          <label><input type="checkbox" name="checkbox">Heavy</label>
+          <label><input type="checkbox" name="checkbox">Simple</label>
+          <label><input type="checkbox" name="checkbox">Complex</label>
+        </div>
+
+        <div id="note10">
+          <h3>Variation 9 - Canon on the third</h3>
+          <label><input type="checkbox" name="checkbox">Singing</label>
+          <label><input type="checkbox" name="checkbox">Speaking</label>
+          <label><input type="checkbox" name="checkbox">Easy</label>
+          <label><input type="checkbox" name="checkbox">Strained</label>
+          <label><input type="checkbox" name="checkbox">Sweet</label>
+        </div>
+
+        <div id="note11">
+          <h3>Variation 10 - Fughetta</h3>
+          <label><input type="checkbox" name="checkbox">Grounded</label>
+          <label><input type="checkbox" name="checkbox">Restless</label>
+          <label><input type="checkbox" name="checkbox">March-like</label>
+          <label><input type="checkbox" name="checkbox">Religious</label>
+          <label><input type="checkbox" name="checkbox">Secular</label>
+        </div>        
+
+        <div id="note12">
+          <h3>Variation 11</h3>
+          <label><input type="checkbox" name="checkbox">Fun</label>
+          <label><input type="checkbox" name="checkbox">Magical</label>
+          <label><input type="checkbox" name="checkbox">Dramatic</label>
+          <label><input type="checkbox" name="checkbox">Crazy</label>
+          <label><input type="checkbox" name="checkbox">Capricious</label>
+        </div>
+
+         <div id="note13">
+          <h3>Variation 12 - Canon on the fourth in contrary motion</h3>
+          <label><input type="checkbox" name="checkbox">Optimistic</label>
+          <label><input type="checkbox" name="checkbox">Pesimistic</label>
+          <label><input type="checkbox" name="checkbox">Forward-looking</label>
+          <label><input type="checkbox" name="checkbox">Backward-looking</label>
+          <label><input type="checkbox" name="checkbox">Repetitive</label>
+        </div>
+
+        <div id="note14">
+          <h3>Variation 13</h3>
+          <label><input type="checkbox" name="checkbox">Captivating</label>
+          <label><input type="checkbox" name="checkbox">Boring</label>
+          <label><input type="checkbox" name="checkbox">Romantic</label>
+          <label><input type="checkbox" name="checkbox">Wave-like</label>
+          <label><input type="checkbox" name="checkbox">Violin-like</label>
+        </div>
+
+        <div id="note15">
+          <h3>Variation 14</h3>
+          <label><input type="checkbox" name="checkbox">Sardonic</label>
+          <label><input type="checkbox" name="checkbox">Good-humored</label>
+          <label><input type="checkbox" name="checkbox">Capricious</label>
+          <label><input type="checkbox" name="checkbox">Dance-able</label>
+          <label><input type="checkbox" name="checkbox">Bird-like</label>
+        </div>
+
+        <div id="note16">
+          <h3>Variation 15 - Canon on the fifth (contrary motion). Andante.</h3>
+          <label><input type="checkbox" name="checkbox">Reaching</label>
+          <label><input type="checkbox" name="checkbox">Lamenting</label>
+          <label><input type="checkbox" name="checkbox">Human</label>
+          <label><input type="checkbox" name="checkbox">Surreal</label>
+          <label><input type="checkbox" name="checkbox">Religious</label>
+        </div>
+
+        <div id="note17">
+          <h3>Aria</h3>
+          The original theme returns, but we now hear it through different ears.
+        </div>
+
+        <div id="note18">
+          <h3>Thank you.</h3>
+          If you enjoyed this performance, subscribe for more at <a href="https://doublebarline.com/subscribe">doublebarline.com</a>
         </div>
       </div>
     </div>
 
     <script>
-      window.scroll(0,1);
-
       let startingState = 0;
       class ProgramNotes {
         constructor() {
@@ -87,7 +232,7 @@
               this.currentState = snapshot.val();
             }
 
-            document.getElementById("movementNum").textContent = this.currentState;
+            // document.getElementById("movementNum").textContent = this.currentState;
             document.getElementById("note" + oldState).style.display = "none";
             document.getElementById("note" + this.currentState).style.display = "block";
             
