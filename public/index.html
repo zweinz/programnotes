@@ -23,8 +23,7 @@
       #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
       #controlButtons { display: none;}
       #currentProgram > div {display: none;} 
-      h3 { font-size: 2em; }
-      label {display: block; font-size: 1.5em; padding: 8px 0;} 
+      label {display: block;  padding: 8px 0;} 
       button { height: 44px; min-width: 44px; margin: 36px 8px 0; padding: 8px; background-color: #BB86FC}
       @media (max-width: 600px) {
         body, #message { margin-top: 0; background: #121212; box-shadow: none; }
@@ -33,25 +32,33 @@
       @-ms-viewport{ width: device-width; }
 
       input[type=checkbox] {
-        width: 2em;
-        height: 2em;
+        width: 1em;
+        height: 1em;
         background-color: white;
-        border-radius: 25%;
+        border-radius: 33%;
         vertical-align: middle;
-        border: 1px solid #ddd;
+        border: 1px 4px solid #ddd;
         -webkit-appearance: none;
         outline: none;
         cursor: pointer;
-        margin: 8px;
+        margin: 2px 4px;
       }
       input[type=checkbox]:checked {
-        background-color: #BB86FC;
+        background-color: #3700B3;
       }
+
+      #message ul {list-style-type: none; padding: 0;}
+      #message ul li {padding: 4px; border-radius: 4px}
+      #message ul li p {margin: 4px 0;}
+      .highlighted {background-color: #BB86FC; color: #121212; margin: 4px 0;}
+      .section {margin-top: 8px;}
+
+      #message .note > p {border-bottom: 1px solid gray; padding-bottom: 16px; margin: 16px 0;}
     </style>
   </head>
   <body>
     <div id="message">
-      <h2>Goldberg Variations - Zach Weiner, piano</h2>
+      <h2>Zach Weiner, piano</h2>
       <div id="currentProgram">
         <div id="controlButtons">
           <button id="prevButton">Previous</button>
@@ -61,48 +68,133 @@
 
         <h3 id="movementNum"></h3>
         
-        <div id="note0">
+        <div id="note0" class="note">
           Please make sure that your phone is in do not disturb mode.
         </div>
 
-        <div id="note1">
-          <h3>Aria</h3>
-          Just take it in.
+        <div id="note1" class="note">
+          <h3>Schubert Sonata in B-Flat Major, D. 960</h3>
+          <h4> I. Molto moderato</h4>
+          <p>With only the gloriously vague instruction to play "very moderately", this movement leaves itself open to a wide range of interpretation from both performer and listener. Follow along with its structure, and become familiar with its themes.</p>
+          <ul>
+            <li class="highlighted">
+            Exposition: Theme 1 "Trill"
+            <p>
+              A beautiful opening melody, marked by a low rumbling trill at the end.
+            </p>
+            </li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="section">Repeat: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="section">Development</li>
+            <li class="section">Recap: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="">Coda</li>
+          </ul>
         </div>
 
-        <div id="note2">
-          <h3>Variation 1</h3>
-          <label><input type="checkbox" name="checkbox">Polonaise</label>
-          <label><input type="checkbox" name="checkbox">Arabesque</label>
-          <label><input type="checkbox" name="checkbox">Dance-able</label>
-          <label><input type="checkbox" name="checkbox">Light</label>
-          <label><input type="checkbox" name="checkbox">Heavy</label>
+        <div id="note2" class="note">
+          <h3>Schubert Sonata in B-Flat Major, D. 960</h3>
+          <h4> I. Molto moderato</h4>
+          <ul>
+            <li class="">
+            Exposition: Theme 1 "Trill"
+            </li>
+            <li class="highlighted">Theme 2 "Chamber"
+            <p>
+              Become familiar with the way the mood shifts, sometimes subtly, sometimes abruptly. Now in the distant key of F# minor, a cello in a string quartet begins the melody.
+            </p>
+            </li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="section">Repeat: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="section">Development</li>
+            <li class="section">Recap: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="">Coda</li>
+          </ul>
         </div>
 
-        <div id="note3">
-          <h3>Variation 2</h3>
-          <label><input type="checkbox" name="checkbox">Playful</label>
-          <label><input type="checkbox" name="checkbox">Argumentative</label>
-          <label><input type="checkbox" name="checkbox">Conversational</label>
-          <label><input type="checkbox" name="checkbox">Dance-like</label>
-          <label><input type="checkbox" name="checkbox">Lyrical</label>
+        <div id="note3" class="note">
+          <h3>Schubert Sonata in B-Flat Major, D. 960</h3>
+          <h4> I. Molto moderato</h4>
+          <ul>
+            <li class="">
+            Exposition: Theme 1 "Trill"
+            </li>
+            <li class="">Theme 2 "Chamber"
+            </li>
+            <li class="highlighted">Theme 3 "Dance"
+              <p>
+                A lighter motive that dissolves towards the end of the section. These themes, once familiar, will become transformed later on.
+              </p>
+            </li>
+            <li class="section">Repeat: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="section">Development</li>
+            <li class="section">Recap: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="">Coda</li>
+          </ul>
         </div>
 
-        <div id="note4">
-          <h3>Variation 3 - Canon on the unison</h3>
-          <label><input type="checkbox" name="checkbox">Formal</label>
-          <label><input type="checkbox" name="checkbox">Casual</label>
-          <label><input type="checkbox" name="checkbox">River-like</label>
-          <label><input type="checkbox" name="checkbox">Pastoral</label>
-          <label><input type="checkbox" name="checkbox">Mechanical</label>
+        <div id="note4" class="note">
+          <h3>Schubert Sonata in B-Flat Major, D. 960</h3>
+          <h4> I. Molto moderato</h4>
+          <ul>
+            <li class="">Exposition: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="section highlighted">Repeat: Theme 1 "Trill"
+              <p>
+                Written just before Schubert died, this theme begins as a distant idea. Listen as it spins and weaves until it's finally spoken out loud.</p>
+                <p>
+                The opening calm breaks off into a dark, rumbling trill in the bass. What does this evoke for you?
+              </p>
+              <label><input type="checkbox" name="checkbox">A distant storm</label>
+              <label><input type="checkbox" name="checkbox">The spectre of death approaching</label>
+              <label><input type="checkbox" name="checkbox">A suppressed reminder of reality</label>
+            </li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="section">Development</li>
+            <li class="section">Recap: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="">Coda</li>
+          </ul>
         </div>
 
-        <div id="note5">
-          <h3>Variation 4</h3>
-          <label><input type="checkbox" name="checkbox">Courtly</label>
-          <label><input type="checkbox" name="checkbox">Religious</label>
-          <label><input type="checkbox" name="checkbox">Light</label>
-          <label><input type="checkbox" name="checkbox">Heavy</label>
+        <div id="note5" class="note">
+          <h3>Schubert Sonata in B-Flat Major, D. 960</h3>
+          <h4> I. Molto moderato</h4>
+          <ul>
+            <li class="">Exposition: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="section highlighted">Repeat: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"
+              <p>
+                
+              </p>
+              <label><input type="checkbox" name="checkbox">A distant storm</label>
+              <label><input type="checkbox" name="checkbox">The spectre of death approaching</label>
+              <label><input type="checkbox" name="checkbox">A suppressed reminder of reality</label>
+            </li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="section">Development</li>
+            <li class="section">Recap: Theme 1 "Trill"</li>
+            <li class="">Theme 2 "Chamber"</li>
+            <li class="">Theme 3 "Dance"</li>
+            <li class="">Coda</li>
+          </ul>
         </div>
 
         <div id="note6">
@@ -235,7 +327,7 @@
             // document.getElementById("movementNum").textContent = this.currentState;
             document.getElementById("note" + oldState).style.display = "none";
             document.getElementById("note" + this.currentState).style.display = "block";
-            
+            document.getElementById("note" + this.currentState).scrollIntoView();
           }.bind(this));
         }
 
