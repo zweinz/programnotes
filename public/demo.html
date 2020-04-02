@@ -64,7 +64,10 @@ function sync() {
 			break;
 		}
 	}
-	noteFrame.contentWindow.setIndex(index);
+	// Make sure it's loaded.
+	if (noteFrame.contentWindow.setIndex) {
+		noteFrame.contentWindow.setIndex(index);
+	}
 }
 
 window.addEventListener("message", function(e) {
