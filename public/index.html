@@ -22,7 +22,7 @@
       #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
       #message a.cta { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
       #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #controlButtons { display: none;}
+      #controlButtons { display: none; }
       #currentProgram > div {display: none;} 
       label {display: block;  padding: 8px 0;} 
       button { height: 44px; min-width: 44px; margin: 36px 8px 0; padding: 8px; background-color: #BB86FC}
@@ -484,6 +484,8 @@
     </div>
 
     <script>
+
+
       let startingState = 0;
       class ProgramNotes {
         constructor() {
@@ -513,23 +515,41 @@
 
         // TODO: Auth for these write functions...
         increment() {
-          this.programRef.set(this.currentState + 1);
+          let index = this.currentState + 1;
+          this.programRef.set(index);
+          this.tellDemo(index);
         }
         decrement() {
-          this.programRef.set(this.currentState - 1);
+          let index = this.currentState - 1;
+          this.programRef.set(index);
+          this.tellDemo(index);
         }
         reset() {
           this.programRef.set(0); 
+          this.tellDemo(0);
+        }
+
+        tellDemo(index) {
+          if (window.parent) {
+            // TODO: security
+            window.parent.postMessage(index, "*");
+          }
         }
       }
 
+      var notes;
+      function setIndex(index) {
+        if (index >= 0 && !!notes && index != notes.currentState) {
+          notes.programRef.set(index);
+        }
+      }
 
       document.addEventListener('DOMContentLoaded', function() {
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // // The Firebase SDK is initialized and available here!
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        notes  = new ProgramNotes();
 
-        let notes = new ProgramNotes();
         notes.start();
         document.getElementById('nextButton').onclick = function() {
           notes.increment();
