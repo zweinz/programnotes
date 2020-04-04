@@ -1,4 +1,6 @@
-<title>Schubert - Sonata in B-Flat Major, D. 960</title>
+<!-- This code is nasty. I'm sorry, I'm in music school now. Very much a prototype. -->
+
+<title>Live Program Notes Demo - Schubert Sonata in B-Flat Major, D. 960</title>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162772805-1"></script>
 <script>
@@ -9,12 +11,15 @@
   gtag('config', 'UA-162772805-1');
 </script>
 
-
+<div id="instructions">
+	<p>Note: Best viewed on a large screen, not optimized for mobile.</p>
+	<p>
+	For some background, see <a href="https://doublebarline.com/yesterday" target=_blank>this post about the piece</a> and <a href="https://doublebarline.com/music-in-the-time-of-covid-19/" target=_blank>this post about livestreamed concerts.</a> Performance by Mitsuko Uchida.
+	</p>
+</div>
 <iframe id="yt" width="560" height="90%" src="https://www.youtube.com/embed/8xDABzplnao?controls=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe src="/index.html?present=true&selfControlled=true" width="400" height="90%" id="notes"></iframe>
-<div id="instructions">
-	For some background on the making of, see <a href="https://doublebarline.com/yesterday" target=_blank>this post about the piece</a> and <a href="https://doublebarline.com/music-in-the-time-of-covid-19/" target=_blank>this post about livestreamed concerts.</a> Performance by Mitsuko Uchida.
-</div>
+
 <script>
 // Get current time from player every second, then map from time to where we are.
 
@@ -96,5 +101,5 @@ window.addEventListener("message", function(e) {
 <style>
 	body { margin: 0 8px; background: black; color: white;}
 	a {color: white;}
-	#instructions {display: inline-block; height: 40px; padding-top: 4px;}
+	#instructions { padding-top: 4px;}
 </style>
