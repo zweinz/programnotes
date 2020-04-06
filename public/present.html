@@ -1,0 +1,33 @@
+<!-- This code is nasty, I'm sorry. Very much a prototype. -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162772805-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162772805-1');
+</script>
+
+<iframe
+	id="stream"
+    src="https://player.twitch.tv/?channel=doublebarline"
+    height="90%"
+    width="0"
+    frameborder="0"
+    scrolling="true"
+    allowfullscreen="true">
+</iframe>
+
+<iframe src="/index.html?present=true" width="360" height="90%" id="notes"></iframe>
+
+<div id="instructions">
+	For some background on the making of, see <a href="https://doublebarline.com/yesterday" target=_blank>this post about the piece</a> and <a href="https://doublebarline.com/music-in-the-time-of-covid-19/" target=_blank>this post about livestreamed concerts.</a>
+</div>
+
+<style>
+	body { margin: 0 8px; background: black; color: white;}
+	a {color: white;}
+	#instructions {display: inline-block; height: 40px; padding-top: 4px;}
+	#stream {width: calc(100% - 400px);}
+</style>
