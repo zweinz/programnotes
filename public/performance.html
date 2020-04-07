@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- This code is nasty, I'm sorry. Very much a prototype. -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162772805-1"></script>
@@ -8,6 +9,10 @@
 
   gtag('config', 'UA-162772805-1');
 </script>
+
+<div id="tips">
+For best results, use a larger screen, or rotate your device to landscape mode and refresh the page.
+</div>
 
 <iframe
 	id="stream"
@@ -29,5 +34,14 @@
 	body { margin: 0 8px; background: black; color: white;}
 	a {color: white;}
 	#instructions {display: inline-block; height: 40px; padding-top: 4px;}
+
 	#stream {width: calc(100% - 400px);}
+	#tips {display: none;}
+	@media screen and (orientation: portrait), screen and (max-width: 600px) {
+		#tips {
+			display: block;
+			padding: 8px;
+			font-size: 1.2em;
+		}
+	}
 </style>
