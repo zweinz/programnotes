@@ -311,34 +311,35 @@
         notes  = new ProgramNotes();
 
         notes.start();
-        document.getElementById('nextButton').onclick = function() {
-          notes.increment();
-        };
-        document.getElementById('prevButton').onclick = function() {
-          notes.decrement();
-        };
-        document.getElementById('resetButton').onclick = function() {
-          notes.reset();
-        };
-
-        addEventListener('keyup', (event) => {
-          switch (event.key) {
-            case "PageUp":
-            case "ArrowRight":
-            case "ArrowDown":
-              notes.increment();
-              break;
-            case "PageDown":
-            case "ArrowLeft":
-            case "ArrowUp":
-              notes.decrement();
-              break;
-          }
-        });
 
         let url = new URL(window.location.href);
         let present = url.searchParams.get("present");
         if (present) {
+          document.getElementById('nextButton').onclick = function() {
+            notes.increment();
+          };
+          document.getElementById('prevButton').onclick = function() {
+            notes.decrement();
+          };
+          document.getElementById('resetButton').onclick = function() {
+            notes.reset();
+          };
+
+          addEventListener('keyup', (event) => {
+            switch (event.key) {
+              case "PageUp":
+              case "ArrowRight":
+              case "ArrowDown":
+                notes.increment();
+                break;
+              case "PageDown":
+              case "ArrowLeft":
+              case "ArrowUp":
+                notes.decrement();
+                break;
+            }
+          });
+
           document.getElementById('controlButtons').style.display = 'block';
         }
 
